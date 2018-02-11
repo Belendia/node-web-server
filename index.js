@@ -60,6 +60,12 @@ app.get('/about', (req, res)=>{
     });//render lets you render any of the templates you have setup with the current view engine
 });
 
+app.get('/projects', (req, res)=>{
+    res.render('projects.hbs', {
+        pageTitle: 'Projects'
+    });
+});
+
 app.get('/bad', (req, res) => {
     res.send({
         errorMessage: 'Unable to handle request.'
